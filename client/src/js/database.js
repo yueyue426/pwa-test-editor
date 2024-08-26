@@ -32,7 +32,7 @@ export const getDb = async () => {
   const request = store.getAll();
   const result = await request;
   console.log('Data retrieved from the database', result);
-  return result;
+  return result[0]?.content;
 };
 
 initdb();
